@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://lamontqiao.github.io/"/>
   <updated>2016-11-25T12:11:49.184Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://lamontqiao.github.io/</id>
   
   <author>
     <name>LaMontQiao</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>极大似然估计</title>
-    <link href="http://yoursite.com/2016/11/25/%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1/"/>
-    <id>http://yoursite.com/2016/11/25/极大似然估计/</id>
+    <link href="http://lamontqiao.github.io/2016/11/25/%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1/"/>
+    <id>http://lamontqiao.github.io/2016/11/25/极大似然估计/</id>
     <published>2016-11-25T12:11:15.000Z</published>
     <updated>2016-11-25T12:11:49.184Z</updated>
     
@@ -40,19 +40,19 @@
     
     </summary>
     
-      <category term="Machine Learing" scheme="http://yoursite.com/categories/Machine-Learing/"/>
+      <category term="Machine Learing" scheme="http://lamontqiao.github.io/categories/Machine-Learing/"/>
     
     
-      <category term="Estimate" scheme="http://yoursite.com/tags/Estimate/"/>
+      <category term="Estimate" scheme="http://lamontqiao.github.io/tags/Estimate/"/>
     
-      <category term="Learning" scheme="http://yoursite.com/tags/Learning/"/>
+      <category term="Learning" scheme="http://lamontqiao.github.io/tags/Learning/"/>
     
   </entry>
   
   <entry>
     <title>first</title>
-    <link href="http://yoursite.com/2016/11/24/first/"/>
-    <id>http://yoursite.com/2016/11/24/first/</id>
+    <link href="http://lamontqiao.github.io/2016/11/24/first/"/>
+    <id>http://lamontqiao.github.io/2016/11/24/first/</id>
     <published>2016-11-24T15:16:12.000Z</published>
     <updated>2016-11-24T15:16:12.995Z</updated>
     
@@ -65,8 +65,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2016/11/23/hello-world/"/>
-    <id>http://yoursite.com/2016/11/23/hello-world/</id>
+    <link href="http://lamontqiao.github.io/2016/11/23/hello-world/"/>
+    <id>http://lamontqiao.github.io/2016/11/23/hello-world/</id>
     <published>2016-11-23T15:33:27.350Z</published>
     <updated>2016-11-24T12:55:26.306Z</updated>
     

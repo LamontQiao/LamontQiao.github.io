@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lamontqiao.github.io/"/>
-  <updated>2016-11-25T12:11:49.184Z</updated>
+  <updated>2016-12-10T02:37:27.055Z</updated>
   <id>http://lamontqiao.github.io/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于Ubuntu 16.04 服务器端配置shadowsocks</title>
+    <link href="http://lamontqiao.github.io/2016/12/10/shadowsocks/"/>
+    <id>http://lamontqiao.github.io/2016/12/10/shadowsocks/</id>
+    <published>2016-12-09T16:02:48.000Z</published>
+    <updated>2016-12-10T02:37:27.055Z</updated>
+    
+    <content type="html"><![CDATA[<p>shadowsocks作为一款非常强大的工具。下面就给大家介绍一下如何在VPS服务器上安装shadowsocks软件并搭建属于自己的VPN。</p>
+<a id="more"></a>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</div></pre></td></tr></table></figure>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ chmod +x shadowsocks.sh</div><div class="line">$ ./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</div></pre></td></tr></table></figure>
+<p>安装过程中会让输入shadowsocks的密码和端口，一般选较大的端口不易发生冲突。当看到如下界面的时候说明安装成功：</p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vi /etc/shadowsocks.json</div></pre></td></tr></table></figure>
+<h3 id="状态更改"><a href="#状态更改" class="headerlink" title="状态更改"></a>状态更改</h3><h4 id="启动"><a href="#启动" class="headerlink" title="启动:"></a>启动:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ /etc/init.d/shadowsocks start</div></pre></td></tr></table></figure>
+<h4 id="停止"><a href="#停止" class="headerlink" title="停止:"></a>停止:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ /etc/init.d/shadowsocks stop</div></pre></td></tr></table></figure>
+<h4 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ /etc/init.d/shadowsocks restart</div></pre></td></tr></table></figure>
+<h3 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ./shadowsocks.sh uninstall</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;shadowsocks作为一款非常强大的工具。下面就给大家介绍一下如何在VPS服务器上安装shadowsocks软件并搭建属于自己的VPN。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="shadowsocks" scheme="http://lamontqiao.github.io/tags/shadowsocks/"/>
+    
+  </entry>
   
   <entry>
     <title>极大似然估计</title>

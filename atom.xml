@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lamontqiao.github.io/"/>
-  <updated>2017-01-01T07:32:38.915Z</updated>
+  <updated>2017-02-15T13:18:54.535Z</updated>
   <id>http://lamontqiao.github.io/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[LeetCode] 39. Combination Sum</title>
+    <link href="http://lamontqiao.github.io/2017/02/15/LeetCode-39-Combination-Sum/"/>
+    <id>http://lamontqiao.github.io/2017/02/15/LeetCode-39-Combination-Sum/</id>
+    <published>2017-02-15T11:53:01.000Z</published>
+    <updated>2017-02-15T13:18:54.535Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="原题"><a href="#原题" class="headerlink" title="原题"></a>原题</h2><blockquote>
+<p>&ensp;&ensp;Given a set of candidate numbers (C) (without duplicates) and a target number (T), find all unique combinations in C where the candidate numbers sums to T.<br>&ensp;&ensp;The same repeated number may be chosen from C unlimited number of times.<br><strong>Note</strong>:<br>&ensp;&ensp;- All numbers (including target) will be positive integers.<br>&ensp;&ensp;- The solution set must not contain duplicate combinations.<br>For example, given candidate set [2, 3, 6, 7] and target 7,<br>A solution set is:  [[7], [2, 2, 3]]<br><strong><a href="https://leetcode.com/problems/combination-sum/" title="查看原题详细信息" target="_blank" rel="external">Problem LINK</a></strong></p>
+</blockquote>
+<a id="more"></a> 
+<h2 id="翻译"><a href="#翻译" class="headerlink" title="翻译"></a>翻译</h2><blockquote>
+<p>&emsp;&emsp;给出一组候选数字(C)和目标数字(T),找到C中所有的组合使找出的数字和为T。C中的数字可以无限制重复被选取。<br>&emsp;&emsp;例如,给出候选数组[2,3,6,7]和目标数字7,那么所求的解为：[7] 和 [2,2,3]<br><strong>注意</strong>：<br>&ensp;&ensp;- 所有的数字(包括目标数字)均为正整数。<br>&ensp;&ensp;- 元素组合(a1, a2, … , ak)必须是非降序(ie, a1 ≤ a2 ≤ … ≤ ak)。<br>&ensp;&ensp;- 解集不能包含重复的组合</p>
+</blockquote>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="回溯-Backtracking"><a href="#回溯-Backtracking" class="headerlink" title="回溯(Backtracking)"></a>回溯(Backtracking)</h3><h3 id="深度优先遍历-DFS"><a href="#深度优先遍历-DFS" class="headerlink" title="深度优先遍历(DFS)"></a>深度优先遍历(DFS)</h3><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">combinationSum</span><span class="params">(self, candidates, target)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line">        :type candidates: List[int]</div><div class="line">        :type target: int</div><div class="line">        :rtype: List[List[int]]</div><div class="line">        """</div><div class="line">        res = []</div><div class="line">        <span class="keyword">if</span> <span class="keyword">not</span> candidates:</div><div class="line">            <span class="keyword">return</span> res</div><div class="line">        candidates.sort()</div><div class="line">        self.helper(candidates, target, [], <span class="number">0</span>, res)</div><div class="line">        <span class="keyword">return</span> res</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">helper</span><span class="params">(self, candidates, target, path, layer, res)</span>:</span></div><div class="line">        <span class="keyword">if</span> target == <span class="number">0</span>:</div><div class="line">            res.append(path)</div><div class="line">            <span class="keyword">return</span></div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(layer, len(candidates)):</div><div class="line">            <span class="keyword">if</span> candidates[i] &gt; target:</div><div class="line">                <span class="keyword">break</span></div><div class="line">            self.helper(candidates, target-candidates[i], path+[candidates[i]], i, res)</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    s = Solution()</div><div class="line">    <span class="keyword">print</span> s.combinationSum([<span class="number">2</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">7</span>], <span class="number">7</span>)</div><div class="line">    <span class="comment"># print s.combinationSum([10, 1, 2, 7, 6, 1, 5], 8)</span></div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;原题&quot;&gt;&lt;a href=&quot;#原题&quot; class=&quot;headerlink&quot; title=&quot;原题&quot;&gt;&lt;/a&gt;原题&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&amp;ensp;&amp;ensp;Given a set of candidate numbers (C) (without duplicates) and a target number (T), find all unique combinations in C where the candidate numbers sums to T.&lt;br&gt;&amp;ensp;&amp;ensp;The same repeated number may be chosen from C unlimited number of times.&lt;br&gt;&lt;strong&gt;Note&lt;/strong&gt;:&lt;br&gt;&amp;ensp;&amp;ensp;- All numbers (including target) will be positive integers.&lt;br&gt;&amp;ensp;&amp;ensp;- The solution set must not contain duplicate combinations.&lt;br&gt;For example, given candidate set [2, 3, 6, 7] and target 7,&lt;br&gt;A solution set is:  [[7], [2, 2, 3]]&lt;br&gt;&lt;strong&gt;&lt;a href=&quot;https://leetcode.com/problems/combination-sum/&quot; title=&quot;查看原题详细信息&quot;&gt;Problem LINK&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="http://lamontqiao.github.io/categories/LeetCode/"/>
+    
+    
+      <category term="Array" scheme="http://lamontqiao.github.io/tags/Array/"/>
+    
+      <category term="Backtracking" scheme="http://lamontqiao.github.io/tags/Backtracking/"/>
+    
+      <category term="DFS" scheme="http://lamontqiao.github.io/tags/DFS/"/>
+    
+  </entry>
   
   <entry>
     <title>Markdown语法说明</title>

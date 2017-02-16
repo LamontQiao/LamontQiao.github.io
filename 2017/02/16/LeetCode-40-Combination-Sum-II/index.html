@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Markdown,Writting," />
+  <meta name="keywords" content="Array,Backtracking,DFS," />
 
 
 
@@ -96,16 +96,19 @@
 
 
 
-<meta name="description" content="Markdown 的目标是实现「易读易写」，成为一种适用于网络的书写语言。这意味着一份使用 Markdown 格式撰写的文件应该可以直接以纯文本发布，并且看起来不会像是由许多标签或是格式指令所构成。">
+<meta name="description" content="原题
+&amp;ensp;&amp;ensp;Given a collection of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T.&amp;ensp;&amp;ensp;Each number in C may only be use">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown语法说明">
-<meta property="og:url" content="http://lamontqiao.github.io/2017/01/01/Markdown语法说明/index.html">
+<meta property="og:title" content="[LeetCode] 40. Combination Sum II">
+<meta property="og:url" content="http://lamontqiao.github.io/2017/02/16/LeetCode-40-Combination-Sum-II/index.html">
 <meta property="og:site_name" content="LaMontQiao">
-<meta property="og:description" content="Markdown 的目标是实现「易读易写」，成为一种适用于网络的书写语言。这意味着一份使用 Markdown 格式撰写的文件应该可以直接以纯文本发布，并且看起来不会像是由许多标签或是格式指令所构成。">
-<meta property="og:updated_time" content="2017-01-01T07:32:38.915Z">
+<meta property="og:description" content="原题
+&amp;ensp;&amp;ensp;Given a collection of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T.&amp;ensp;&amp;ensp;Each number in C may only be use">
+<meta property="og:updated_time" content="2017-02-16T14:06:38.028Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Markdown语法说明">
-<meta name="twitter:description" content="Markdown 的目标是实现「易读易写」，成为一种适用于网络的书写语言。这意味着一份使用 Markdown 格式撰写的文件应该可以直接以纯文本发布，并且看起来不会像是由许多标签或是格式指令所构成。">
+<meta name="twitter:title" content="[LeetCode] 40. Combination Sum II">
+<meta name="twitter:description" content="原题
+&amp;ensp;&amp;ensp;Given a collection of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T.&amp;ensp;&amp;ensp;Each number in C may only be use">
 
 
 
@@ -133,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://lamontqiao.github.io/2017/01/01/Markdown语法说明/"/>
+  <link rel="canonical" href="http://lamontqiao.github.io/2017/02/16/LeetCode-40-Combination-Sum-II/"/>
 
 
 
 
 
-  <title> Markdown语法说明 | LaMontQiao </title>
+  <title> [LeetCode] 40. Combination Sum II | LaMontQiao </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -280,7 +283,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://lamontqiao.github.io/2017/01/01/Markdown语法说明/">
+  <link itemprop="mainEntityOfPage" href="http://lamontqiao.github.io/2017/02/16/LeetCode-40-Combination-Sum-II/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="LaMontQiao">
@@ -304,7 +307,7 @@
             
             
               
-                Markdown语法说明
+                [LeetCode] 40. Combination Sum II
               
             
           </h1>
@@ -317,8 +320,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-01T15:20:30+08:00">
-                2017-01-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-16T21:47:33+08:00">
+                2017-02-16
               </time>
             
 
@@ -336,8 +339,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Skills/" itemprop="url" rel="index">
-                    <span itemprop="name">Skills</span>
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
                   </a>
                 </span>
 
@@ -355,7 +358,7 @@
 
           
           
-             <span id="/2017/01/01/Markdown语法说明/" class="leancloud_visitors" data-flag-title="Markdown语法说明">
+             <span id="/2017/02/16/LeetCode-40-Combination-Sum-II/" class="leancloud_visitors" data-flag-title="[LeetCode] 40. Combination Sum II">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -380,65 +383,15 @@
       
 
       
-        <p>Markdown 的目标是实现<strong>「易读易写」</strong>，成为一种适用于网络的书写语言。这意味着一份使用 Markdown 格式撰写的文件应该可以直接以<strong>纯文本</strong>发布，并且看起来不会像是由许多标签或是格式指令所构成。 </p>
+        <h2 id="原题"><a href="#原题" class="headerlink" title="原题"></a>原题</h2><blockquote>
+<p>&ensp;&ensp;Given a collection of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T.<br>&ensp;&ensp;Each number in C may only be used once in the combination.<br><strong>Note</strong>:<br>&ensp;&ensp;- All numbers (including target) will be positive integers.<br>&ensp;&ensp;- The solution set must not contain duplicate combinations.<br>For example, given candidate set [10, 1, 2, 7, 6, 1, 5] and target 8,<br>A solution set is:  [ [1, 7], [1, 2, 5], [2, 6], [1, 1, 6]]<br><strong><a href="https://leetcode.com/problems/combination-sum-ii/" title="查看原题详细信息" target="_blank" rel="external">Problem LINK</a></strong></p>
+</blockquote>
 <a id="more"></a> 
-<h2 id="概述：兼容HTML"><a href="#概述：兼容HTML" class="headerlink" title="概述：兼容HTML"></a>概述：兼容HTML</h2><p>HTML 是一种发布的格式，Markdown 是一种书写的格式。<br>Markdown 的格式语法只涵盖纯文本可以涵盖的范围，不在 Markdown 涵盖范围之内的标签（即HTML中的大部分非文本标签），都可以直接在文档里面用 HTML 加标签撰写，却不需要额外标注这是 HTML 或是 Markdown。<br>HTML 的<strong>区段（行内）标签</strong>如 &lt;span&gt;、&lt;cite&gt;、&lt;del&gt;等标签可以在 Markdown 的段落、列表或是标题里随意使用。反过来，Markdown 语法在 HTML 区段标签间是有效的。<br>然而，HTML 中的<strong>区块（行间）标签</strong>如&lt;div&gt;、&lt;table&gt;、&lt;pre&gt;、&lt;p&gt;等标签使用会受到制约：要求必须在前后加上空行与其它内容区隔开，并且它们的开始标签与结尾标签不能用制表符或空格来缩进。</p>
-<h2 id="区块元素"><a href="#区块元素" class="headerlink" title="区块元素"></a>区块元素</h2><h3 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h3><p>一个 Markdown <strong>段落</strong>是由一个或多个连续的文本行组成，它的前后要有一个以上的<strong>空行</strong>（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。普通段落不该用空格或制表符来缩进。  </p>
-<h3 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h3><p><strong>段内换行</strong>的方法有两种：一种是在换行处插入&lt;br&gt;来实现换行；另一种是在插入处输入两个以上的空格然后回车即可。<br><strong>段间换行</strong>只用和上一段落之间有一行以上的空行即可</p>
-<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>Markdown 支持两种标题的语法，<strong>类atx</strong> 和<strong>类Setext</strong>形式，这里重点描述atx的形式</p>
-<ul>
-<li><strong>类atx</strong>的形式可以书写6阶标题，对应语法为在行首插入1~6个<code>#</code>。另外，你可以在行尾选择性地插入一个或多个<code>#</code>来「闭合」你的标题，不过这个不是强制性地。</li>
-<li><strong>类Setext</strong>形式是用底线的形式，利用 <code>=</code> （最高阶标题）和 <code>-</code> （第二阶标题）这两个符号来书写，但是如上所言，这种方式只能描述两阶标题,使用没有前者广泛。</li>
-</ul>
-<h3 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h3><p>下面介绍在 Markdown 文件中建立一个<strong>区块引用</strong>的方法。对引用的文本需要自己先断好行，然后在每行的最前面加上<code>&gt;</code>这个符号表示这部分是引用。当然，Markdown也允许你偷懒只在整个段落的第一行最前面加上<code>&gt;</code>。另外，区块引用可以嵌套（例如：引用内的引用），只要根据层次加上不同数量的<code>&gt;</code>即可（意味着第二层引用使用<code>&gt;&gt;</code>即可实现）<br><strong>引用</strong>的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等。</p>
-<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>Markdown 支持<strong>有序列表</strong>和<strong>无序列表</strong>。  </p>
-<ul>
-<li>无序列表使用星号<code>*</code>、加号<code>+</code>或是减号<code>-</code>作为列表标记</li>
-<li>有序列表则使用数字接着一个英文句点<code>.</code>来实现。但很重要的一点是，你在有序列表标记上使用的数字并不会影响输出的 HTML 结果，也就是说你地有序列表地前几个字符是<code>1.~2.~3.~~</code>还是<code>6.~3.~8.~~</code>都无所谓，对应地HTML输出的列表序号仍是按照顺序输出，这里也就是说你完全没有必要在意数字地正确性，只要是<code>数字+英文句点</code>地形式即可表示有序列表。但还是建议书写的时候第一个项目最好还是从 1. 开始，因为 Markdown 未来可能会支持有序列表的 start 属性，其次自己看着也舒服。</li>
-<li>列表项目可以包含多个段落，每个项目下的段落都必须缩进 4 个空格或是 1 个制表符。</li>
-<li>如果要在列表项目内放进引用，那 &gt; 就需要缩进。</li>
-<li>如果要放代码区块的话，该区块就需要缩进两次，也就是 8 个空格或是 2 个制表符</li>
-<li>当然，项目列表很可能会不小心产生(例如:199<strong>5.</strong> My birth.)，换句话说，也就是在行首出现<code>数字-句点-空白</code>这种格式地语句，要避免这样的状况，你可以在句点前面加上反斜杠(例如:1995. My birth.)。</li>
-</ul>
-<h3 id="代码区块"><a href="#代码区块" class="headerlink" title="代码区块"></a>代码区块</h3><p>和程序相关的写作或是标签语言原始码通常会有已经排版好的<strong>代码区块</strong>，通常这些区块我们并不希望它以一般段落文件的方式去排版，而是照原来的样子显示，这就需要在 Markdown 中建立代码区块。具体方法是只要简单地缩进 4 个空格或是 1 个制表符就可以，这个代码区块会一直持续到没有缩进的那一行（或是文件结尾）。</p>
-<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>你可以在一行中用<strong>三个及三个以上</strong>的星号、减号、底线来建立一个分隔线，行内不能有其他东西，除了在星号或减号中间插入空格。<br>例:</p>
-<hr>
-<p>分割线1</p>
-<hr>
-<p>分割线2</p>
-<h2 id="区段元素"><a href="#区段元素" class="headerlink" title="区段元素"></a>区段元素</h2><h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>Markdown 支持两种形式的链接语法： <strong>行内式</strong>和<strong>参考式</strong>两种形式。不管是哪一种，链接文字都是用方括号 <strong>[链接文字]</strong> 来标记。</p>
-<p>首先介绍<strong>行内式</strong>的链接，只要<strong>在方括号后面紧接着圆括号并插入网址链接</strong>即可。这里的链接可以是网址，也可以是同样主机上的资源，此时使用相对路径即可。如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可。(例如：<a href="http://lamontqiao.top/" title="这里是鼠标悬停之后显示title的内容：LaMontQiao" target="_blank" rel="external">我的博客</a>)</p>
-<p>接下来再介绍<strong>参考式</strong>链接：在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记。当然，你也可以选择性地在两个方括号中间加上一个空格，这并未做出严格限制。接着，在文件的任意处，你可以把这个标记的链接内容定义出来，这样就完成了链接的定义。<br>而<strong>链接定义的格式</strong>如下(注意：网址定义只有在产生链接的时候用到，并不会直接出现在文件之中)：</p>
-<ul>
-<li>首先是方括号（前面可以选择性地加上至多三个空格来缩进），里面输入链接文字</li>
-<li>接着一个冒号，后面跟上一个以上的空格或制表符</li>
-<li>接着链接的网址(可以直接输入网址或者是用尖括号包含起来都行)</li>
-<li>选择性地接着 title 内容，可以用单引号、双引号或是括弧来定义  </li>
-</ul>
-<p>例：<br><code>...This is [an example] [id] reference-style link...</code><br>在文件的某处定义以下内容：<br><code>[id]: &lt;http://lamontqiao.top/&gt;  &quot;这里是鼠标悬停之后显示title的内容：LaMontQiao&quot;</code></p>
-<p>注意：链接辨别标签可以有字母、数字、空白和标点符号，但是并不区分大小写，比如说[link1][a] 与[link2][A]产生同样效果的网址定义。</p>
-<p>最后介绍下<strong>隐式链接标记</strong>，它相当于是<strong>参考式</strong>的一种延伸，让你可以省略指定链接标记。<br>这种情形下，链接标记会视为等同于链接文字，要用隐式链接标记只要在链接文字后面加上一个空的方括号。如果你要让 “Google” 链接到 google.com，你可以简化成：<code>[Google][]</code>,然后在某处定义链接内容：<code>[Google]: http://google.com/</code>即可。由于链接文字可能包含空白，所以这种简化型的标记内也许包含多个单词。<br>通常来说，参考式的链接其实重点不在于它比较好写，而是它比较好读。而一般情况下对于同一篇文章书写使用的字符数来说：参考式的链接 &lt; 行内式的链接 &lt; HTML书写的链接。</p>
-<h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><p>Markdown 使用星号<code>*</code>和底线<code>_</code>作为标记强调字词的符号，被<code>*</code>或<code>_</code>包围的字词会被转成用 <code>&lt;em&gt;</code> 标签包围（斜体），用两个<code>*</code>或<code>_</code>包起来的话，则会被转成 <code>&lt;strong&gt;</code>（粗体）。但是需要注意的是，如果你的 <code>*</code> 和 <code>_</code> 两边都有空白的话，它们就只会被当成普通的符号。<br>如果要在文字前后直接插入普通的星号或底线，你可以用反斜线转义之后使用。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p><strong>行内代码</strong>：如果要标记一小段行内代码，你可以用<strong>反引号</strong>把它包起来。但是如果你需要在代码区段内插入反引号，可以用更多个反引号来开启和结束代码区段。（例如：<code>There is a literal backtick (`) here.</code>)<br>但是如何在区段的一开始就插入反引号呢？(如果直接插入会产生三个反引号连在一起的情形)，解决办法是在代码区段的起始和结束端都可以放入一个空白，起始端后面一个，结束端前面一个，这样就可以实现一开始就插入反引号了。（例如：A backtick-delimited string in a code span: <code>`foo` </code>）</p>
-<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p>Markdown 使用一种和链接很相似的语法来标记图片，同样也允许两种样式： <strong>行内式</strong>和<strong>参考式</strong>。</p>
-<ul>
-<li>行内式图片的描述语法：<ul>
-<li>一个惊叹号 !</li>
-<li>接着一个方括号[]，里面放上图片的替代文字</li>
-<li>接着一个普通括号()，里面放上图片的网址，最后还可以选择性地用引号包住并加上’title’ 文字。</li>
-</ul>
-</li>
-<li>参考式图片的描述方法：<ul>
-<li>一个惊叹号 !</li>
-<li>接着一个方括号[]，里面放上图片的替代文字</li>
-<li>接着再一个方括号[]，里面放上图片网址的描述id，图片参考的定义方式和参考式链接的一样。</li>
-</ul>
-</li>
-</ul>
-<p>但是，Markdown 目前没有办法指定图片的宽高，如果你需要的话，可以使用普通的 <img> 标签来实现。</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="反斜杠"><a href="#反斜杠" class="headerlink" title="反斜杠"></a>反斜杠</h3><p>Markdown 支持一些符号前面加上反斜杠来插入普通的符号(即转义)。</p>
-<h3 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h3><p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用方括号包起来， Markdown 就会自动把它转成链接。一般网址的链接文字就和链接地址一样。  </p>
-
+<h2 id="翻译"><a href="#翻译" class="headerlink" title="翻译"></a>翻译</h2><blockquote>
+<p>&emsp;&emsp;给出一组候选数字(C)和目标数字(T),找出C中所有的组合，使组合中数字的和为T。C中每个数字在每个组合中只能使用一次。<br>&emsp;&emsp;例如,给出候选数组[10,1,6,7,2,1,5] 和目标数字8,那么所求的解为：[[1,7], [1,2,5], [2,6], [1,1,6]]<br><strong>注意</strong>：<br>&ensp;&ensp;- 所有的数字(包括目标数字)均为正整数。<br>&ensp;&ensp;- 元素组合(a1, a2, … , ak)必须是非降序(ie, a1 ≤ a2 ≤ … ≤ ak)。<br>&ensp;&ensp;- 解集不能包含重复的组合</p>
+</blockquote>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>&emsp;&emsp;题意可以这么理解：你有一个盒子里有N个小球，球上面有不同的数字（也可以相同）。现在给定一个目标值target，要求无放回的从盒子里面取小球，要求取出的球上面的数字加起来等于target，同时这个取球路径没有在当前结果集中出现过。题目要求把所有符合要求地路径加起来为target的组合返回。这道题的关键就在于数字<strong>不可以重复取</strong>，也就是上述无放回地取球（区别于<a href="https://leetcode.com/problems/combination-sum/" target="_blank" rel="external">[LeetCode] 39. Combination Sum</a>）。<br>&emsp;&emsp;和[LeetCode] 39一样，这仍是一个回溯问题（Backtracking），可以通过深度优先遍历（DFS）来解决。可以分别用序列中的每一个数字为根，每一层都可以是当前剩余序列的任何一个数字，从根往下，直到数字加起来大于target（该情况返回上一层），或者等于target（该情况记录结果并返回上一层）。但是，不同之处在于candidates中可能出现重复元素，所以<strong>一种方法</strong>是使用prev参数每次check一下candidates[i] == prev，如果相等的话就continue直接跳过后续结点；<strong>另一种方法</strong>是将产生地路径结果放入到一个集合set中去，因为集合保证了元素地互异性，因此即使有相同的元素出现，通过使用集合也会将其过滤掉。相比第一种效率要高于第二种，相当于在计算之前剪枝和在计算之后剪枝，程序中采用第二种方法。<br>&emsp;&emsp;注意：<strong>Python中元组（tuple）可以做键，但列表不能做键</strong>，因此列表不能直接存储到集合中。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">combinationSum2</span><span class="params">(self, candidates, target)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line">        :type candidates: List[int]</div><div class="line">        :type target: int</div><div class="line">        :rtype: List[List[int]]</div><div class="line">        """</div><div class="line">        res = set([])</div><div class="line">        <span class="keyword">if</span> <span class="keyword">not</span> candidates:</div><div class="line">            <span class="keyword">return</span> list(res)</div><div class="line">        candidates.sort()</div><div class="line">        self.helper(candidates, target, (), <span class="number">0</span>, res)</div><div class="line">        <span class="keyword">return</span> list(res)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">helper</span><span class="params">(self, candidates, target, path, index, res)</span>:</span></div><div class="line">        <span class="keyword">if</span> target == <span class="number">0</span>:</div><div class="line">            res.add(path[:])</div><div class="line">            <span class="keyword">return</span></div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(index, len(candidates)):</div><div class="line">            <span class="keyword">if</span> candidates[i] &gt; target:</div><div class="line">                <span class="keyword">break</span></div><div class="line">            self.helper(candidates, target-candidates[i], path+(candidates[i],), i+<span class="number">1</span>, res)</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</div><div class="line">    s = Solution()</div><div class="line">    <span class="keyword">print</span> s.combinationSum2([<span class="number">10</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">1</span>, <span class="number">5</span>], <span class="number">8</span>)</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -478,9 +431,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Markdown/" rel="tag"># Markdown</a>
+            <a href="/tags/Array/" rel="tag"># Array</a>
           
-            <a href="/tags/Writting/" rel="tag"># Writting</a>
+            <a href="/tags/Backtracking/" rel="tag"># Backtracking</a>
+          
+            <a href="/tags/DFS/" rel="tag"># DFS</a>
           
         </div>
       
@@ -489,8 +444,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/24/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/02/15/LeetCode-39-Combination-Sum/" rel="next" title="[LeetCode] 39. Combination Sum">
+                <i class="fa fa-chevron-left"></i> [LeetCode] 39. Combination Sum
               </a>
             
           </div>
@@ -499,8 +454,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/15/LeetCode-39-Combination-Sum/" rel="prev" title="[LeetCode] 39. Combination Sum">
-                [LeetCode] 39. Combination Sum <i class="fa fa-chevron-right"></i>
+              <a href="/2017/02/16/LeetCode-38-Count-and-Say/" rel="prev" title="[LeetCode] 38. Count and Say">
+                [LeetCode] 38. Count and Say <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -673,7 +628,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述：兼容HTML"><span class="nav-number">1.</span> <span class="nav-text">概述：兼容HTML</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区块元素"><span class="nav-number">2.</span> <span class="nav-text">区块元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#段落"><span class="nav-number">2.1.</span> <span class="nav-text">段落</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#换行"><span class="nav-number">2.2.</span> <span class="nav-text">换行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标题"><span class="nav-number">2.3.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#区块引用"><span class="nav-number">2.4.</span> <span class="nav-text">区块引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表"><span class="nav-number">2.5.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码区块"><span class="nav-number">2.6.</span> <span class="nav-text">代码区块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分割线"><span class="nav-number">2.7.</span> <span class="nav-text">分割线</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区段元素"><span class="nav-number">3.</span> <span class="nav-text">区段元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#链接"><span class="nav-number">3.1.</span> <span class="nav-text">链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强调"><span class="nav-number">3.2.</span> <span class="nav-text">强调</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.3.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片"><span class="nav-number">3.4.</span> <span class="nav-text">图片</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">4.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#反斜杠"><span class="nav-number">4.1.</span> <span class="nav-text">反斜杠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自动链接"><span class="nav-number">4.2.</span> <span class="nav-text">自动链接</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#原题"><span class="nav-number">1.</span> <span class="nav-text">原题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#翻译"><span class="nav-number">2.</span> <span class="nav-text">翻译</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题解"><span class="nav-number">3.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">4.</span> <span class="nav-text">代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python"><span class="nav-number">4.1.</span> <span class="nav-text">Python</span></a></li></ol></li></ol></div>
             
 
           </div>
